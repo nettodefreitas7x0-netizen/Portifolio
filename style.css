@@ -1,0 +1,902 @@
+/* --- Reset & Variáveis --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+    
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #334155;
+      --accent-blue: #387bf8;
+      --accent-green: #22c55e; 
+      --accent-dark-blu: rgb(1, 0, 44);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius: 8px;
+        --transicao: all 0.9s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1300px;
+      margin: 0 auto;
+      
+    }
+
+.img-home{
+}
+
+.mascara {
+position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000224a1;
+  z-index:0;
+}
+
+
+
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+  
+    }
+    /* --- Cabeçalho --- */
+  .header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color:rgba(0, 0, 32, 0.233) ;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  border: 2px solid var(--bg-card);
+  width: 95vw;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: 0.5rem auto;
+  /* Removido o height: 70px fixo e o overflow-x: hidden */
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  .bi-whatsapp{
+    margin: 0;
+    
+    
+  }
+}
+
+    .nav-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 10rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent-blue);
+    }
+
+    .nav {
+      display: flex;
+      
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav a {display: inline-block;
+      position: relative;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      text-decoration: none; /* Remove o risco padrão do link */
+      color: #333;
+      font-weight: 600;
+      padding-bottom: 4px;
+        color: var(--text-main);
+        
+        
+    }
+
+    .nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+   
+    }
+
+    
+
+
+
+    .nav .effect::after{
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 0; /* Começa com largura zero */
+      height: 2px; /* Espessura da listra */
+      background-color:var(--accent-blue); /* Cor da listra */
+      transition: width 0.3s ease-in-out; /* Duração e suavidade da animação */
+    }
+
+
+
+    .nav a:hover::after {
+
+      width: 100%; /* Expande até 100% da largura do texto */
+    }
+
+    .nav a:hover{
+      color: var(--accent-blue);
+    }
+
+    .nav .btn-nav {
+  
+
+     background: linear-gradient(to right, rgba(13, 143, 250, 0.822),rgba(0, 68, 255, 0.596));
+      color:white;
+      padding: 0.2rem 2rem;
+      border-radius: 30px;
+   padding-top: 6px;
+       transition: all ease-in-out 0.5s;
+       justify-content: center;
+       text-align: center;
+       align-items: center;
+     
+
+          .bi-whatsapp{
+         
+      }
+    
+    
+      
+    }
+
+    .nav-list a{
+      margin: 10px;
+    }
+
+    .nav .btn-nav:hover{
+      color: white;
+      box-shadow: 0 0 15px var(--accent-blue); 
+        text-decoration: none;
+        background-color:var(--accent-blue);
+    
+    }
+
+ 
+.img-fundo {
+  background-image: url(assets/estrelas.jfif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;       /* Alterado de 100vw para 100% */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;           /* Garante que cubra da ponta esquerda... */
+  right: 0;          /* ... até a ponta direita */
+  z-index: -1;
+}
+   
+
+
+    /* --- Hero Section --- */
+ .hero {
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 0 4rem;
+  text-align: center;
+  align-items: center;
+  color: white;
+  justify-content: center;
+ 
+
+  
+ 
+      width: 100vw;
+  
+
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    /* Alterado de 100vw para 100% */
+  
+width: 100vw;
+z-index: 1;
+
+
+   
+   
+
+}
+
+    
+
+.badge {
+  display: inline-block;
+  background-color: rgba(56, 189, 248, 0.1);
+  color: var(--accent-blue);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  
+    }
+
+    .bi{
+    
+    }
+
+    .bi:hover{
+
+      
+
+    }
+
+
+
+    .hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      max-width: 800px;
+      margin-left: 0;
+      margin-right: 0;
+      color: var(--text-main);
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 0  2rem 0;
+      line-height: 1.6;
+  
+    }
+
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* --- Botões --- */
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      display: flex;
+    
+      color: var(--accent-green);
+           transition: all ease-in-out 0.5s;
+            border: solid 2px var(--accent-green);
+    }
+
+    .btn-primary:hover{
+  
+
+      box-shadow: 0 0 10px var(--accent-green); 
+       transition: all ease-in-out 0.5s;
+    }
+
+    .btn-secondary {
+      background-color: var(--accent-blue);
+      color:white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+          transition: all ease-in-out 0.5s;
+    }
+
+    .btn-secondary:hover {
+  
+      
+        box-shadow: 0 0 10px var(--accent-blue); 
+        
+    }
+
+    .btn-whatsapp {
+    
+      background-color: var(--accent-green);
+    color: #000000;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+       transition: all ease-in-out 0.5s;
+    }
+
+    .btn-whatsapp:hover {
+    
+        box-shadow: 0 0 20px var(--accent-green); 
+
+
+    }
+
+    .bi-whatsapp{
+      margin: 0 0 0 10px ;
+    }
+
+    /* --- Títulos Gerais --- */
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    /* --- Sobre --- */
+    .sobre {
+        width: 100%;
+      padding: 5rem 0;
+  
+        background: linear-gradient(to right, rgba(0, 0, 44, 0.822),rgba(0, 0, 24, 0.822));
+        z-index: 1;
+    }
+
+    .cards-grid-sobre {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 colunas padrão em telas grandes */
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem; /* Adicionado padding lateral para respiro em telas menores */
+    }
+
+    .card-sobre {
+      background-color: rgba(99, 99, 99, 0.144);
+      padding: 2rem;
+      border-radius: var(--radius);
+     
+      transition: all ease-in-out 0.6s, box-shadow 0.9s ease;
+      height: 300px;
+      width: 100%; /* Ajustado para 100% para respeitar o grid responsivo */
+      
+      svg{
+        background-color: #0084fff3;
+        padding: 10px;
+        border-radius: 10px;
+       box-shadow: 0 12px 25px -4px rgba(0, 123, 255, 0.664), 
+              0 0 15px rgba(0, 123, 255, 0.2);
+      }
+    
+    }
+
+    .card-sobre:hover{
+    transform: translatey(-20px);
+
+      
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      img{
+  width: 50px;
+ 
+      }
+    
+    }
+
+    .card-sobre h3 {
+      margin-bottom: 0.8rem;
+      font-size: 1.25rem;
+      
+    }
+
+    .card-sobre p {
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* 1. Garante o posicionamento correto do card para prender os pseudo-elementos */
+.sobre .card-sobre {
+  position: relative;
+  overflow: hidden; /* Evita que a linha vaze antes do hover */
+  /* Mantenha o restante das suas propriedades do .card aqui */
+}
+
+/* 2. Cria os pseudo-elementos (metade esquerda e metade direita da linha) */
+.sobre .card-sobre::before,
+.sobre .card-sobre::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 3px; /* Espessura da linha */
+  background-color: #007bff; /* Cor azul (ajuste para o hex exato da sua marca se preferir) */
+  width: 0; /* Começa sem largura */
+  transition: width 0.6s ease, left 6s ease, right 6s ease; /* Animação suave */
+}
+
+/* Metade que expande do centro para a esquerda */
+.sobre .card-sobre::before {
+  right: 50%;
+}
+
+/* Metade que expande do centro para a direita */
+.sobre .card-sobre::after {
+  left: 50%;
+}
+
+/* 3. Efeito ao passar o mouse: expande 50% para cada lado, cobrindo o topo de ponta a ponta */
+.sobre .card-sobre:hover::before,
+.sobre .card-sobre:hover::after {
+  width: 50%;
+}
+
+/* Atualize ou adicione a transição na classe .card */
+.sobre .card-sobre {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent; /* Garante base para a borda não 'saltar' */
+}
+
+/* Efeito de brilho azul no hover */
+.sobre .card-sobre:hover {
+  transform: translateY(-5px); /* Eleva o card levemente (opcional) */
+  border: solid 2px rgba(0, 123, 255, 0.5); /* Borda sutil azul */
+box-shadow: 0 12px 25px -4px rgba(0, 123, 255, 0.055), 
+              0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+    .sobre-inside {
+      display: flex;
+      flex-direction: column;
+     
+  
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    
+ 
+
+    }
+
+    /* Seção Geral de Serviços */
+.servicos-section {
+  padding: 5rem 1.5rem;
+  /* Substitua pelo valor exato da cor da sua seção sobre (ex: var(--bg-sobre) ou #0f172a) */
+ background: linear-gradient(to right, rgba(12, 12, 51, 0.925),rgba(0, 0, 24, 0.719));
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  h3{
+      margin: 16px 0;
+  }
+p{
+  color:var(--text-muted);
+
+}
+
+svg{
+  color: #007bff;
+}
+
+
+
+}
+
+.servicos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.servicos-titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.servicos-subtitulo {
+  font-size: 1.1rem;
+
+  margin-bottom: 3rem;
+}
+
+/* Grid Layout */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  .badge{
+  position: relative;
+  right: 5px;
+  
+
+  margin: 20px 0 5px 0;
+  font-size: 0.8rem;
+}  
+}
+
+/* 1. Garante o posicionamento relativo e oculta o que vazar */
+.card-servico {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  height: 420px;
+  width: 350px;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  position: relative; /* Obrigatório para prender a linha */
+  overflow: hidden;   /* Esconde a linha quando ela tiver largura 0 */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+/* 2. Remove o comportamento antigo do ::before e divide em dois pseudo-elementos (ou usa o truque do 50% central) */
+
+
+/* Mantém os efeitos de hover do card */
+.card-servico:hover {
+  transform: translateY(-6px);
+
+    border-color: rgba(0, 123, 255, 0.5); /* Borda sutil azul */
+box-shadow: 0 12px 25px -4px rgba(0, 123, 255, 0.082), 
+              0 0 15px rgba(0, 123, 255, 0.2);
+ 
+}
+
+.card-servico-descricao{
+p {
+    color: #94a3b8;
+}
+}
+
+
+
+
+    /* --- Portfólio --- */
+    .portfolio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 0;
+          width: 100%;
+               background: linear-gradient(to right, rgba(0, 0, 44, 0.774),rgba(0, 0, 24, 0.808));
+               p {
+                margin: 10px auto 50px auto;
+               }
+             
+   
+    }
+
+    .portfolio-grid {
+      display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px; /* Trava o grid em 3 colunas nas telas grandes */
+  margin: 0 auto;
+      
+    }
+
+    .portfolio-card {
+      background-color: var(--bg-secondary);
+      border-radius: var(--radius);
+      overflow: hidden;
+    border: solid 3px var(--bg-card) ;
+        transition: all ease-in-out 0.6s, box-shadow 0.9s ease;
+                   background-color:rgba(99, 99, 99, 0.144) ;
+    
+      border-radius: var(--radius);
+      border: 2px solid rgba(255, 255, 255, 0.151);
+        transition: all ease-in-out 0.6s, box-shadow 0.9s ease;
+
+    }
+
+
+    .portfolio-card:hover {
+    transition: all ease-in-out 0.4s;
+  transform: translatey(-10px);
+
+   border: 2px #225bc5 solid;
+
+    /* p,h3 {
+      color: #225bc5;
+    } */
+    }
+
+    .portfolio-card img {
+      height: 100%;
+    }
+
+
+
+    .portfolio-img {
+      height: 180px;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 600;
+     
+   
+    }
+  .portfolio-card:hover{
+       box-shadow: #0f63ff2c 0 0 10px 10px;
+  }
+    .portfolio-info {
+      
+      padding: 1.5rem;
+    }
+
+    .portfolio-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* --- CTA Contato --- */
+    .cta-section {
+        width: 100%;
+      padding: 5rem 0;
+      background-color:rgb(0, 0, 32) ;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cta-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-content p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* --- Rodapé --- */
+    .footer {
+        background-color:rgb(0, 0, 32) ;
+        width: 100%;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    /* Menu Mobile Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    cursor: pointer;
+    border: solid 2px var(--text-muted) ;
+    border-radius: 10px;
+      padding: 3px;
+      z-index: 1000;
+      background-color: var( --cor-primaria);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--text-muted);
+    border-radius: 3px;
+    transition: var(--transicao);
+    z-index: 1000;
+    
+  
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 5.5px);
+    background-color: #d13030; /* Mantido para manter o feedback do botão de fechar */
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5.5px);
+    background-color: #d13030;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+    /* --- Responsividade --- */
+    @media (max-width: 1024px) {
+      /* Ajusta os cards da seção Sobre para 2 colunas em telas médias/tablets */
+      .cards-grid-sobre {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-container {
+   
+   
+      }
+
+
+
+.menu-toggle {
+  display: flex;
+  
+  span {
+   
+  }
+}
+
+
+   .nav {display: none;
+      flex-direction: column;
+        height: 300px;
+      
+        top: 70px;
+        position: fixed;
+
+      
+       
+
+     top: 66px;
+     left: 0;
+   
+        width: 100%;
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+        transition: left 0.3s ease;
+  
+       
+   
+           opacity: 0;
+   transition: opacity 0.3s ease, display 0.3s ease allow-discrete;
+  
+        
+
+        
+    }
+
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+      
+        top: 66px;
+        
+            opacity: 1.0;
+       
+  
+ 
+       @starting-style {
+    opacity: 0;
+  } }
+
+      .nav-list {
+          display: flex;       
+ background-color: var(--accent-dark-blu);
+     
+         border-bottom: var(--cor-primaria) 2px solid;
+          border-left: var(--cor-primaria) 2px solid;
+          border-right: var(--cor-primaria) 2px solid;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 0;
+        padding: var(--espacamento-xs) 0 var(--espacamento-md) 0;
+       width: 100%;
+       height: 100%;
+       justify-content: space-around;
+       align-items: center;
+       gap: 20px;
+         border: var(--bg-card) solid 2px;
+        
+        
+    }
+
+
+      
+      .hero h1 {
+        font-size: 1.8rem;
+        text-align: center;
+       
+       
+      }
+      .hero-content{
+        text-align: center;
+         align-items: center;
+        
+      }
+      
+      .hero {
+        padding: 5rem 0 2rem;
+      }
+
+
+    }
+
+    @media (max-width: 600px) {
+      /* Ajusta os cards da seção Sobre para 1 coluna em telas menores/celulares */
+      .cards-grid-sobre {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px){
+    .header{
+
+    }
+
+    .hero{
+      
+    }
+
+    .nav-container a {
+       
+      }
+    }
